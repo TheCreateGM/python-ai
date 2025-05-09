@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbox</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="gpt-root">
+        <aside class="gpt-sidebar">
+            <div class="sidebar-top">
+                <button class="icon-btn sidebar-icon" title="Menu"><i class="fa-solid fa-bars"></i></button>
+                <button class="icon-btn sidebar-icon" title="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="icon-btn sidebar-icon" title="New Chat"><i class="fa-regular fa-message"></i></button>
+            </div>
+            <div class="sidebar-chats">
+                <div class="sidebar-section-title">Today</div>
+                <div class="sidebar-chat-item active"><i class="fa-regular fa-comments"></i> Minecraft Game Components</div>
+                <div class="sidebar-section-title">Previous 7 Days</div>
+                <div class="sidebar-chat-item"><i class="fa-regular fa-comments"></i> Shotcut MP4 Export Issue</div>
+                <div class="sidebar-chat-item"><i class="fa-regular fa-comments"></i> Firefox YouTube Issue Fix</div>
+                <div class="sidebar-chat-item"><i class="fa-regular fa-comments"></i> Employee Management System</div>
+                <div class="sidebar-chat-item"><i class="fa-regular fa-comments"></i> Improve Network Speed Fedora</div>
+                <div class="sidebar-chat-item"><i class="fa-regular fa-comments"></i> Change Location Fedora Term</div>
+                <div class="sidebar-chat-item"><i class="fa-regular fa-comments"></i> How to fix this</div>
+                <div class="sidebar-chat-item"><i class="fa-regular fa-comments"></i> Preload installation issue</div>
+                <div class="sidebar-chat-item"><i class="fa-regular fa-comments"></i> Optimize Fedora Hyprland Lap</div>
+                <div class="sidebar-chat-item"><i class="fa-regular fa-comments"></i> Upgrade Fedora 41 to 42</div>
+                <div class="sidebar-chat-item"><i class="fa-regular fa-comments"></i> Install multiple Java versions</div>
+                <div class="sidebar-chat-item"><i class="fa-regular fa-comments"></i> Install VirtualBox Fedora</div>
+            </div>
+            <div class="sidebar-bottom">
+                <button class="sidebar-upgrade"><i class="fa-solid fa-arrow-up-right-from-square"></i> Upgrade plan</button>
+            </div>
+        </aside>
+        <main class="gpt-main">
+            <header class="gpt-header">
+                <div class="gpt-title"><i class="fa-brands fa-rocketchat"></i> ChatGPT <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="gpt-header-actions">
+                    <button id="themeToggle" class="icon-btn" title="Toggle theme"><i class="fa-regular fa-moon"></i></button>
+                    <button class="icon-btn" title="User"><i class="fa-regular fa-user"></i></button>
+                </div>
+            </header>
+            <section class="gpt-center">
+                <div class="gpt-welcome">
+                    <h1>What can I help with?</h1>
+                    <div class="gpt-suggestions">
+                        <button class="gpt-suggestion"><i class="fa-solid fa-globe"></i> Search</button>
+                        <button class="gpt-suggestion"><i class="fa-solid fa-location-dot"></i> Reason</button>
+                        <button class="gpt-suggestion"><i class="fa-solid fa-brain"></i> Deep research</button>
+                        <button class="gpt-suggestion"><i class="fa-solid fa-image"></i> Create image</button>
+                        <button class="gpt-suggestion"><i class="fa-solid fa-ellipsis"></i></button>
+                    </div>
+                </div>
+                <div class="chat-messages" id="chatMessages"></div>
+            </section>
+            <form class="gpt-input-bar" id="chatForm" autocomplete="off">
+                <label for="fileInput" class="icon-btn" title="Attach file"><i class="fa-solid fa-paperclip"></i></label>
+                <input type="file" id="fileInput" style="display:none;" />
+                <textarea id="messageInput" placeholder="Ask anything..." rows="1"></textarea>
+                <button id="sendButton" class="icon-btn" title="Send"><i class="fa-regular fa-paper-plane"></i></button>
+            </form>
+        </main>
+    </div>
+    <script src="../static/script.js"></script>
+</body>
+</html> 
